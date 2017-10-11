@@ -2,12 +2,14 @@ version: '2'
 
 services:
   watchtower:
+    container_name: watchtower
     restart: always
     image: v2tec/watchtower:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
   docker-gc:
+    container_name: docker-gc
     restart: always
     image: spotify/docker-gc:latest
     volumes:
