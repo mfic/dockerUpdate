@@ -2,6 +2,7 @@
 
 dd if=/dev/zero of=/swapfile count=2048 bs=1M
 chmod 600 /swapfile
+chown root:root /swapfile
 mkswap /swapfile
 swapon /swapfile
 
