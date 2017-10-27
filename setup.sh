@@ -55,4 +55,7 @@ case $DC in
 				exit 1
 				;;
 		esac ;;
+    clean)
+        docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
+        ;;
 esac
