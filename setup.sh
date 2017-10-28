@@ -58,6 +58,6 @@ case $DC in
     clean)
         docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc:ro spotify/docker-gc
         docker volume prune -f
-        docker-network prune -f
+        docker network prune -f
         ;;
 esac
